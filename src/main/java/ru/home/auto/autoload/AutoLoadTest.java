@@ -11,4 +11,7 @@ package ru.home.auto.autoload;
  */
 public class AutoLoadTest {
     
+    public static void main(String[] args){
+        System.out.println("hello world");
+    }
 }
