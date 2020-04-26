@@ -1,0 +1,16 @@
+апр. 26, 2020 5:30:27 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: прошли коннект
+апр. 26, 2020 5:30:27 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: прошел запрос
+апр. 26, 2020 5:30:27 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: test: application/pdf    null 200
+апр. 26, 2020 5:30:27 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: запись в файл прошла нормально
+апр. 26, 2020 5:30:38 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: прошли коннект
+апр. 26, 2020 5:30:39 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: прошел запрос
+апр. 26, 2020 5:30:39 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: test: application/pdf    null 200
+апр. 26, 2020 5:30:39 PM ru.home.auto.autoload.AutoLoadTest test2
+INFO: запись в файл прошла нормально
