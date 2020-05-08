@@ -67,7 +67,7 @@ public class AutoLoadTest {
             fh.setFormatter(formatter);
 
             log.addHandler(fh);
-
+//----------------------------
             //подключение к сайту по прямой ссылке
             Connection con = Jsoup.connect("https://dogovor-kupli-prodazhi.com/wp-content/uploads/2018/03/dkp_avto.pdf");
             log.info("прошли коннект");
@@ -76,6 +76,8 @@ public class AutoLoadTest {
             String contentType = resp.contentType();
             String charset = resp.charset();
             int statusCode = resp.statusCode();
+            String nameFile = resp.header("Content-Disposition");
+            System.out.println(nameFile);
             log.log(Level.INFO, "test: {0}    {1} {2}", new Object[]{contentType, charset, statusCode});
 
             //запись в файл полученной информации
