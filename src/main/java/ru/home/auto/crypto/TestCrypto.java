@@ -10,11 +10,15 @@
  */
 package ru.home.auto.crypto;
 
+import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
@@ -44,17 +48,21 @@ public class TestCrypto {
      * конструктор с инициализацией шифра
      */
     public TestCrypto() {
-//        try {
-            String testKey = "testdfsdgsfgsgfKeys53535635gsfgsg";
-            SecretKey secretKey2 = new SecretKeySpec(testKey.getBytes(), "AES");
+        try {
+            //        try {
+            String testKey = "testdfsdgsfgsgfKeys53535635gsfgs" ;//16,24,32 byte
+            SecretKey secretKey2 = new SecretKeySpec(testKey.getBytes("UTF-8"), "AES");
 //            KeyGenerator keyGenerator = KeyGenerator.getInstance(chifr);
 //
 //            keyGenerator.init(256);
 //            this.secretKey = keyGenerator.generateKey();
- this.secretKey = secretKey2;
+this.secretKey = secretKey2;
 //        } catch (NoSuchAlgorithmException e) {
 //            e.printStackTrace();
 //        }
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(TestCrypto.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public byte[] makeAes(byte[] rawMessage, int cipherMode) {
